@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="T.png">
+    <title>Task Managment Tool</title>
+    
+</head>
+<body class="bg-gradient-to-r from-green-400 to-blue-500 ">
+
+    <div class="container flex justify-center mx-auto px-4 bg-white flex flex-col w-4/5 h-full m-auto p-20 font-mono">
+
+        <header class="text-center p-5 border-b-2 border-green-50 ">
+            <h1 class="text-4xl leading-tight"> Project-Task Mangment </h1>
+            <h4> You may add a project bt adding a project name, then add its tasks.</h4>
+            <h5> The tool will calculate the total cost of the project.</h5>
+        </header>
+
+        <div>  <!--- Project--> 
+            <label class="block text-gray-700 text-lg font-bold mb-2 py-8">
+                Add A Project
+              </label>
+                <div class="input-group">
+                <input class='shadow appearance-none border rounded w-50 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='project-name' type="text" placeholder='Project Name' required>
+                <input class='shadow appearance-none border rounded w-50 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id='project-manager' type="text" placeholder='Project Manager Name'required>
+            </div>
+                <div class="input-group py-8">
+                    <label class="inline text-green-400 text-sm font-bold mb-2 px-2">
+                        From
+                      </label>   <input  class='date' type="date" name="Start-Date" id="Start-Date" placeholder="Start Dtae" required> 
+                      <label class="inline text-green-400 text-sm font-bold mb-2 px-2">
+                        To
+                      </label>  <input class='date' type="date" name="End-Date" id="End-Date" placeholder="End Date" required>
+                </div>
+                <div class="">
+                    <button id='add-project-btn' class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-2 border-b-4 border-blue-700 hover:border-blue-500 rounded center"> Add New Project</button>
+                </div>
+            <br>
+            <br>
+        </div>
+
+                    <hr>
+         <div>
+            <label class="block text-gray-700 text-lg font-bold mb-2 py-2">
+               Select a Project
+              </label> <select name="projects-drop" id="projects-drop" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 my-4">
+        </div>
+         
+        
+         <div> <!--- Add Task -->
+                <input class='shadow appearance-none border rounded w-50 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' type="text" name="Task-Name"id="Task-Name" placeholder="Task Name" required>
+                <input class='shadow appearance-none border rounded w-50 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' type="text" name="Assigned" id="Assigned" placeholder="Assigned Person Name" required>
+                <input  class='shadow appearance-none border rounded w-80 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-4' type="number" name="Cost" id="Cost" placeholder="Cost in $" required>
+                <button id='add-task-btn' class="  bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-8"> Add Task </button>
+         </div> <!--- End div of form-->
+         
+         <!------ List of tasks:-->
+         <h3> List of Tasks:</h3>
+
+         <div id="list-of-tasks">
+            <table id='taskTable'>
+
+              </table>
+              <br>
+              <br>
+         </div>
+
+
+        
+    </div> <!--End container-->
+    
+    <script defer src="/app.js"></script>
+
+
+</body>
+</html>
