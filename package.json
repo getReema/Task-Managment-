@@ -1,0 +1,23 @@
+{
+  "name": "task-managment",
+  "version": "1.0.0",
+  "description": "#### another edit",
+  "main": "app.js",
+  "scripts": {
+    "build:css": "tailwind build src/styles.css -o dist/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getReema/Task-Managment-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getReema/Task-Managment-/issues"
+  },
+  "homepage": "https://github.com/getReema/Task-Managment-#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "tailwindcss": "^2.1.1"
+  }
+}
